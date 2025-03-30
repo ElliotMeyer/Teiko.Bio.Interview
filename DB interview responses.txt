@@ -1,0 +1,36 @@
+Database interview questions:
+1. Database_schema_diagram.
+2. What would be some advantages in capturing this information in a database?
+
+The advantages of capturing this information in a database is that we can store the data more efficiently, the data is secure, and it is scalable as more data is inputted. 
+
+3. Based on the schema you provide in (1), please write a query to summarize the number of subjects available for each condition.
+
+SELECT 
+    Condition, 
+    COUNT(DISTINCT Subject) AS NumberOfSubjects
+FROM 
+    Samples
+
+4. Please write a query that returns all melanoma PBMC samples at baseline (time_from_treatment_start is 0) from patients who have treatment tr1.
+
+  SELECT 
+    *
+FROM 
+    Samples
+WHERE 
+    sample_type = 'PBMC'
+    AND condition = 'melanoma'
+    AND treatment = 'tr1'
+    AND time_from_treatment_start = 0;
+
+
+5. Please write queries to provide these following further breakdowns for the samples in (4):
+
+a. How many samples from each project
+
+
+b. How many responders/non-responders
+
+c. How many males, females
+
