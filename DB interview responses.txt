@@ -25,12 +25,17 @@ WHERE
     AND time_from_treatment_start = 0;
 
 
+
 5. Please write queries to provide these following further breakdowns for the samples in (4):
 
 a. How many samples from each project
-
+GROUP BY
+    project_id;
 
 b. How many responders/non-responders
-
+GROUP BY
+    response;
 c. How many males, females
+GROUP BY
+    sex;
 
